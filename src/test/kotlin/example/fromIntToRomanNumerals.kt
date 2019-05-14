@@ -76,7 +76,7 @@ class FromIntToRomanNumeralsTest : StringSpec({
     "1998 should be MCMXCVIII" {
         1998.toRomanNumeral() shouldBe("MCMXCVIII")
     }
-    "2583 should be MCMXCVIII" {
+    "2583 should be MMDLXXXIII" {
         2583.toRomanNumeral() shouldBe("MMDLXXXIII")
     }
 })

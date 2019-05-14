@@ -9,6 +9,17 @@ fun Int.toRomanNumeral(): String = Symbol.closestBelow(this)
         }
     }
 
+fun String.toDecimal() : Int {
+    return Symbol.highestStartingSymbol(this)
+        .let{symbol ->
+            if (symbol != null) {
+                symbol.decimalValue + this.drop(symbol.name.length).toDecimal()
+            } else {
+                0
+            }
+        }
+}
+
 private enum class Symbol(val decimalValue: Int) {
     I(1),
     IV(4),
@@ -30,20 +41,9 @@ private enum class Symbol(val decimalValue: Int) {
                 .sortedByDescending { it.decimalValue }
                 .firstOrNull { value >= it.decimalValue }
 
-        fun highestStatingSymbol(value: String) =
+        fun highestStartingSymbol(value: String) =
             values()
             .sortedByDescending { it.decimalValue }
             .firstOrNull { value.startsWith(it.name) }
-    }
-}
-
-fun String.toDecimal() : Int {
-    return Symbol.highestStatingSymbol(this)
-        .let{symbol ->
-        if (symbol != null) {
-            symbol.decimalValue + this.drop(symbol.name.length).toDecimal()
-        } else {
-            0
-        }
     }
 }
