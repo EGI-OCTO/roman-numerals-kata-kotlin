@@ -1,7 +1,3 @@
 package example
 
-fun Int.toRomanNumeral() : String = if (this == 1) {
-    "I"
-} else {
-    "II"
-}
+fun Int.toRomanNumeral() : String = (0 until this).joinToString("") { "I" }

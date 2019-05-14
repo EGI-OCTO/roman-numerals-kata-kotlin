@@ -10,4 +10,7 @@ class RomanNumeralsTest : StringSpec({
     "2 should be II" {
         2.toRomanNumeral() shouldBe("II")
     }
+    "3 should be III" {
+        3.toRomanNumeral() shouldBe("III")
+    }
 })
