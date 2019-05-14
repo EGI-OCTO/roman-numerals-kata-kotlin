@@ -1,9 +1,5 @@
 package example
 
-fun getGreeting(): String {
-    return "Hello, world!"
-}
-
 fun main() {
-    println(getGreeting())
+    println(2583.toRomanNumeral())
 }
