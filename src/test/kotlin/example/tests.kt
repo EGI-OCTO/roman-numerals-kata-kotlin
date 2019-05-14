@@ -28,4 +28,7 @@ class RomanNumeralsTest : StringSpec({
     "8 should be VIII" {
         8.toRomanNumeral() shouldBe("VIII")
     }
+    "9 should be IX" {
+        9.toRomanNumeral() shouldBe("IX")
+    }
 })
