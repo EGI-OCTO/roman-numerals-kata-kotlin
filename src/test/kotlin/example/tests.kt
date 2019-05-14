@@ -22,4 +22,7 @@ class RomanNumeralsTest : StringSpec({
     "6 should be VI" {
         6.toRomanNumeral() shouldBe("VI")
     }
+    "7 should be VII" {
+        7.toRomanNumeral() shouldBe("VII")
+    }
 })
