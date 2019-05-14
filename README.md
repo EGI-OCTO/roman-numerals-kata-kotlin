@@ -1,4 +1,4 @@
-# Diamond kata using Property Based Testing in Kotlin
+# Roman numeral's kata using TDD in Kotlin
 
 A Kotlin implementation of the Roman Numerals' Kata that follows a TDD approach. 
 
